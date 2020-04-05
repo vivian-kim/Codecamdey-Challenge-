@@ -1,0 +1,76 @@
+#Write a program that asks the user for the weight of their package and then tells them 
+#which method of shipping is cheapest and how much it will cost to ship their package using Sal’s Shippers.
+
+#1. A function for the cost of ground shipping.
+
+def gr_weight_cost(weight):
+  if weight > 10.0:
+    return (20.00 + weight * 4.75)
+  elif (6.0 < weight <= 10.0):
+    return (20.00 + weight * 4.00)
+  elif (2.0 < weight <= 6.0):
+    return (20.00 + weight * 3.00)
+  else:
+    return(20.00 + weight * 1.50)
+
+print(gr_weight_cost(8.4))
+  
+  #What is the cheapest method of shipping a 4.8 pound package and how much would it cost?
+  
+  def gr_weight_cost(weight):
+  if weight > 10.0:
+    return (20.00 + weight * 4.75)
+  elif (6.0 < weight <= 10.0):
+    return (20.00 + weight * 4.00)
+  elif (2.0 < weight <= 6.0):
+    return (20.00 + weight * 3.00)
+  else:
+    return(20.00 + weight * 1.50)
+
+def premium_gr_cost(num):
+  if (num >= 0):
+    return "125"
+  
+def drone_weight_cost(weight2):
+    if weight2 > 10.0:
+      return (weight2 * 14.25)
+    elif (6.0 < weight2 <= 10.0):
+      return (weight2 * 12.00)
+    elif (2.0 < weight2 <= 6.0):
+      return (weight2 * 9.00)
+    else:
+      return(weight2 * 4.50)
+
+print(gr_weight_cost(4.8))
+print(drone_weight_cost(4.8))
+print(premium_gr_cost(4.8))
+
+#What is the cheapest method of shipping a 41.5 pound package and how much would it cost?
+
+def gr_weight_cost(weight):
+  if weight > 10.0:
+    return (20.00 + weight * 4.75)
+  elif (6.0 < weight <= 10.0):
+    return (20.00 + weight * 4.00)
+  elif (2.0 < weight <= 6.0):
+    return (20.00 + weight * 3.00)
+  else:
+    return(20.00 + weight * 1.50)
+
+def premium_gr_cost(num):
+  if (num >= 0):
+    return "125"
+  
+def drone_weight_cost(weight2):
+    if weight2 > 10.0:
+      return (weight2 * 14.25)
+    elif (6.0 < weight2 <= 10.0):
+      return (weight2 * 12.00)
+    elif (2.0 < weight2 <= 6.0):
+      return (weight2 * 9.00)
+    else:
+      return(weight2 * 4.50)
+
+print(gr_weight_cost(41.5))
+print(drone_weight_cost(41.5))
+print(premium_gr_cost(41.5))
