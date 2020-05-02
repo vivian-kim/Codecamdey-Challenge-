@@ -1,0 +1,37 @@
+import codecademylib
+import numpy as np
+import matplotlib.pyplot as plt
+
+dist_1 = np.genfromtxt("1.csv",  delimiter=",")
+dist_2 = np.genfromtxt("2.csv",  delimiter=",")
+dist_3 = np.genfromtxt("3.csv",  delimiter=",")
+dist_4 = np.genfromtxt("4.csv",  delimiter=",")
+
+#plot your histogram here
+plt.hist(dist_1)
+plt.show()
+plt.hist(dist_2)
+plt.show()
+plt.hist(dist_3)
+plt.show()
+plt.hist(dist_4)
+plt.show()
+
+not_normal= 4
+
+std1= np.std(dist_1)
+std2= np.std(dist_2)
+std3= np.std(dist_3)
+std4= np.std(dist_4)
+
+print(std1)
+print(std2)
+print(std3)
+print(std4)
+
+#calculate the ratio of standard eviations between dist2 and dist3 
+ratio= std2/std3
+print(ratio)
+
+#0.581422
+#thre result is not close enough to perform a numerical hypothesis test between two datasets
