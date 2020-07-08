@@ -1,0 +1,17 @@
+from scipy.stats import ttest_1samp
+import numpy as np
+
+correct_results = 0 # Start the counter at 0
+
+daily_visitors = np.genfromtxt("daily_visitors.csv", delimiter=",")
+
+for i in range(1000): # 1000 experiments
+   #your ttest here:
+   t, pval = ttest_1samp(daily_visitors[i], 30) # perform t-test
+   if pval < 0.05: # check our p-value
+       correct_results += 1
+    #print the pvalue here:
+   print pval
+print "We correctly recognized that the distribution was different in " + str(correct_results) + " out of 1000 experiments."
+  
+tstatistic,pval = ttest_1samp(daily_visitors,correct_results)
